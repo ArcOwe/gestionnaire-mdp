@@ -15,10 +15,10 @@ if not os.path.exists("master.hash"): #vérifie si le fichier qui stock le hash 
 with open("master.hash", "r") as f:
     stored_hash = f.read()
 
-password2 = getpass.getpass("Entrer votre mot de passe: ")
+password2 = getpass.getpass("Entrer votre mot de passe: ") #variable pour stocker le mot de passe en clair (uniquement en mémoire,donc temporairement)
 
 try:
-    ph.verify(stored_hash, password2)
-except VerifyMismatchError:
+    ph.verify(stored_hash, password2) #vérification du mdp
+except VerifyMismatchError: #gestion de l'erreur mdp incorrect
     print("Mot de passe incorrect")
     
