@@ -1,10 +1,14 @@
-import click #module pour CLI
-import getpass
+import click
+from commands.init import init
+from commands.unlock import unlock
 
-@click.group() #permet d'introduire plusieurs commandes
+@click.group()
 def cli():
-    """Gestionnaire de mot de passe""" #nom du CLI
+    """Gestionnaire de mot de passe"""
     pass
+
+cli.add_command(init)
+cli.add_command(unlock)
 
 if __name__ == "__main__":
     cli()
