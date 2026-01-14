@@ -4,4 +4,4 @@ __pycache__/
 .env
 maitre.hash
 .DS_Store
-
+vault.hash
